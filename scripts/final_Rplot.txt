@@ -1,0 +1,140 @@
+pdf("Figure_S21.pdf",width=30,height=30)
+par(mfrow=c(3,5))
+read.table(file="../refree_scores/all/Aotus_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(3407700*100)/2692882952
+ plot(M$V2,log(M$V3),col="green",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Aotus nancymaae")~" [Percent corrected=",0.12,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Aotus_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="green",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Callithrix_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(3407700*100)/2692882952
+plot(M$V2,log(M$V3),col="red",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Callithrix jacchus")~" [Percent corrected=",0.09,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Callithrix_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="red",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Fascicularis_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(5610508*100)/2946742467
+plot(M$V2,log(M$V3),col="blue",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Macaca fascicularis")~" [Percent corrected=",0.190,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Fascicularis_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="blue",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Mandrillus_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(127163*100)/3062009387
+plot(M$V2,log(M$V3),col="brown",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Mandrillus leucophaeus")~" [Percent corrected=",0.004,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Mandrillus_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="brown",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Paniscus_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(2578182*100)/3286418096
+plot(M$V2,log(M$V3),col="blueviolet",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Pan paniscus")~" [Percent corrected=",0.078,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Paniscus_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="blueviolet",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Papio_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(3895295*100)/2959039691
+plot(M$V2,log(M$V3),col="darkmagenta",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Papio anubis")~" [Percent corrected=",0.132,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Papio_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="darkmagenta",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Rhinopithecus_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(1861299*100)/2851443704
+plot(M$V2,log(M$V3),col="darkorange",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Rhinopithecus roxellana")~" [Percent corrected=",0.065,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Rhinopithecus_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="darkorange",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Saimiri_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(219768*100)/2608588537
+plot(M$V2,log(M$V3),col="darkgoldenrod1",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Saimiri boliviensis")~" [Percent corrected=",0.008,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Saimiri_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="darkgoldenrod1",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Mulata_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(5386421*100)/2971305124
+plot(M$V2,log(M$V3),col="hotpink",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Macaca mulatta")~" [Percent corrected=",0.181,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Mulata_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="hotpink",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Chlorocebus_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(4767051*100)/2764662910
+plot(M$V2,log(M$V3),col="hotpink4",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Chlorocebus sabeus")~" [Percent corrected=",0.172,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Chlorocebus_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="hotpink4",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Capucinus_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(1432193*100)/2702553793
+plot(M$V2,log(M$V3),col="tan",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Cebus capucinus imitator")~" [Percent corrected=",0.053,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Capucinus_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="tan",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Cercocebus_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(1525253*100)/2848246034
+plot(M$V2,log(M$V3),col="darkslategray",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Cercocebus atys")~" [Percent corrected=",0.054,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Cercocebus_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="darkslategray",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Gorilla_gorilla_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(1770702*100)/3062980899
+plot(M$V2,log(M$V3),col="cyan3",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Gorilla gorilla")~" [Percent corrected=",0.058,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Gorilla_gorilla_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="cyan3",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Troglodytes_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(167190*100)/3231169626
+plot(M$V2,log(M$V3),col="deepskyblue4",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Pan troglodytes")~" [Percent corrected=",0.005,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Troglodytes_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="deepskyblue4",cex=3,pch=19)
+
+read.table(file="../refree_scores/all/Human_unique.txt",header=FALSE)->M
+(M$V1*100)/sum(M$V1)->M$V3
+cor<-(1763194*100)/3099684685
+plot(M$V2,log(M$V3),col="deeppink",ylim=c(log(.000001),log(100)),xlim=c(-5,100),yaxt="n",xlab="Referee score",ylab="Percent of bases",main=expression(paste(""~italic("Homo sapiens")~" [Percent corrected=",0.057,"]",sep="")),cex=3)
+axis(side=2,at=log(c(.000001,0.00001,0.0001,0.0001,0.001,0.1,0.5,1.1,2,5,10,100)),labels=c(0,0.00001,0.0001,0.0001,0.001,0.1,0.5,1,2,5,10,100))
+read.table(file="../refree_scores/exonic/Human_unique_exonic.txt",header=FALSE)->E
+(E$V1*100)/sum(E$V1)->E$V3
+points(E$V2,log(E$V3),col="deeppink",cex=3,pch=19)
+
+dev.off()
+
+

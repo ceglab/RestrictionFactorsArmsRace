@@ -1,0 +1,10 @@
+#corrected bases show
+nohup cat paniscus_pair.txt|awk 'NF>3{print $0}'|wc -l >pan_correct.txt &
+#all same score give in a text file 
+nohup cat paniscus_pair.txt|awk '{print $3}'|sort|uniq -c >unique.txt & 
+# total bases present
+ nohup wc -l paniscus_pair.txt >total_base.txt &
+ %calculate= pan_correct.txt /total_base
+ 
+ 
+ 

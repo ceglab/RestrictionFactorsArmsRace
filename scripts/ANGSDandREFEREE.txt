@@ -1,0 +1,12 @@
+#merging sorted bam file---
+nohup samtools merge -@10 merge.sort.bam file1.sort.bam file2.sort.bam file3.sort.bam file4.sort.bam
+
+#list file of sorted bam---
+cat >merge.list
+merge.sort.bam
+
+#command for ANGSD---
+ /home/aclab/Downloads/Softwares/angsd-0.931/angsd -bam merge.list  -ref Macaca_fascicularis.Macaca_fascicularis_5.0.dna_sm.toplevel.fa -out SRR50-gl  -GL 2 -minQ 0 -doGlf 4 -doMaf 1 -doMajorMinor 1 
+
+#command for Referee----
+ /home/aclab/Downloads/Softwares/refree/referee/./referee.py -gl SRR50-gl.glf.gz -ref Macaca_fascicularis.Macaca_fascicularis_5.0.dna_sm.toplevel.fa --fastq --correct --bed -o fascicularis 

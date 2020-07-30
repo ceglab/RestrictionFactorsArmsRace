@@ -1,0 +1,24 @@
+ grep -v "Chromosome" Aotus_nancymaae.txt |cut -f 1-4|sort -k1,1 -k2n,2|bedtools merge -i stdin > Aotus_nancymaae.bed
+cat Aotus.txt|awk '{print $1,$2,$2,$3}'|sed 's/ /\t/g'|bedtools intersect -a stdin -b /home/aclab/alignment/DNA_alignment/unique_correct/Aotus_nancymaae.bed -wa -wb|cut -f 1,2,4 > Aotus_exonic.txt
+
+cat Aotus_exonic.txt|awk '{print $4}'|sort|uniq -c >unique_exonic.txt
+
+NEW COMMAND--
+#
+grep -v "Chromosome" Aotus_nancymaae.txt |cut -f 1-4|sort -k1,1 -k2n,2|bedtools merge -i stdin > Aotus_nancymaae.bed
+#command for corrected_exon
+nohup cat /home/aclab/alignment/DNA_alignment/Aotus_nancymaae/paired_sam/Aotus.txt|awk '{if(NF>3)print $1,$2,$2,$3,$4,$5;else if(NF==3)print $1,$2,$2,$3,"NA","NA";}'|sed 's/ /\t/g'|bedtools intersect -a stdin -b Aotus_nancymaae.bed -wa -wb|cut -f 1-6|sed 's/NA\t//g'|sed 's/\tNA//g'|awk 'NF>4{print $0}'|wc -l >Aotus_correct_exon.txt &
+ 
+ #command for toatal exon
+nohup cat /home/aclab/alignment/DNA_alignment/Aotus_nancymaae/paired_sam/Aotus.txt|awk '{if(NF>3)print $1,$2,$2,$3,$4,$5;else if(NF==3)print $1,$2,$2,$3,"NA","NA";}'|sed 's/ /\t/g'|bedtools intersect -a stdin -b Aotus_nancymaae.bed -wa -wb|cut -f 1-6|sed 's/NA\t//g'|sed 's/\tNA//g'|wc -l >Aotus_whole_exon.txt &
+ 
+ #command for whole exon
+ nohup cat /home/aclab/alignment/DNA_alignment/Aotus_nancymaae/paired_sam/Aotus.txt|awk '{if(NF>3)print $1,$2,$2,$3,$4,$5;else if(NF==3)print $1,$2,$2,$3,"NA","NA";}'|sed 's/ /\t/g'|bedtools intersect -a stdin -b Aotus_nancymaae.bed -wa -wb|cut -f 1-6|sed 's/NA\t//g'|sed 's/\tNA//g'>Aotus_wholetxt_exon.txt &
+ 
+ cat Aotus_exonic.txt|awk '{print $4}'|sort|uniq -c >unique_exonic.txt
+ 
+ 
+ 
+
+ 
+ 
